@@ -11,13 +11,13 @@ module.exports = app => {
     router.get("/", faqs.findAll);
  
   
-    // Retrieve a single Faq with id
+    // Retrieve a single Faq with ids
     router.get("/:id", faqs.findOne);
   
-    // Update a Faq with id
+    // Update a Faq with ids
     router.put("/:id",[authJwt.verifyToken, authJwt.isAdmin], faqs.update);
   
-    // Delete a Faq with id
+    // Delete a Faq with ids
     router.delete("/:id", [authJwt.verifyToken, authJwt.isAdmin],faqs.delete);
   
     // Create a new Faq
