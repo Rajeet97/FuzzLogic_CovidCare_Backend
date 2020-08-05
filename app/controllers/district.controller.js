@@ -42,7 +42,7 @@ exports.create = (req, res) => {
         
 };
 
-// Retrieve all District from the database.
+// Retrieve all Districts from the database.
 exports.findAll = (req, res) => {
   
   District.find().then(function(data){

@@ -14,12 +14,14 @@ exports.signup = (req, res) => {
     password: bcrypt.hashSync(req.body.password, 8)
   });
 
+//  for error message
   user.save((err, user) => {
     if (err) {
       res.status(500).send({ message: err });
       return;
     }
 
+// for different user setup
     if (req.body.roles) {
       Role.find(
         {
