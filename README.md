@@ -17,3 +17,8 @@ npm install
 ```
 node server.js
 ```
+## for linux
+use bycrypt package
+
+## for windows
+use bycryptjs package
