@@ -11,9 +11,7 @@ module.exports = app => {
     router.post("/", [authJwt.verifyToken],donations.create );
     
     // Retrieve all Donations
-    // router.get("/", [authJwt.verifyToken],donations.findAll);
-
-    router.get('/',authJwt.verifyToken,(req,res)=>{
+      router.get('/',authJwt.verifyToken,(req,res)=>{
         Donation.find().then(function(data){
         res.json(data);
       }).catch(function(e){
