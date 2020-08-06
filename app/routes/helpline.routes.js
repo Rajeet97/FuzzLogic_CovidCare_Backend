@@ -11,7 +11,6 @@ module.exports = app => {
     router.post("/", [authJwt.verifyToken],helplines.create );
     
     // Retrieve all Helplines
-    // router.get("/", [authJwt.verifyToken],helplines.findAll);
 
     router.get('/',authJwt.verifyToken,(req,res)=>{
       Helpline.find().then(function(data){
