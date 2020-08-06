@@ -12,7 +12,6 @@ exports.create = (req, res) => {
     return;
   }
 
-
   // Create a Faq
   const faq = new Faq({
     question: req.body.question,

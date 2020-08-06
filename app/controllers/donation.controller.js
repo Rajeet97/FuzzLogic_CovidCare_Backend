@@ -55,19 +55,6 @@ exports.create = (req, res) => {
         
 };
 
-// // Retrieve all Helpline from the database.
-// exports.findAll = (req, res) => {
-  
-//     Helpline.find().then(function(data){
-//       res.json(data);
-//     }).catch(function(e){
-  
-//          res.json(e)
-    
-//     });
-
-//   };
-
   // Retrieve all Helpline from the database  by user.
 exports.findAll = (req, res) => {
   
