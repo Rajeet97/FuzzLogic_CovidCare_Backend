@@ -9,8 +9,6 @@ module.exports = app => {
   
     // Create a new Suspect
     router.post("/", [authJwt.verifyToken],suspects.create );
-    
-
 
     router.get('/',authJwt.verifyToken, authJwt.isAdmin,(req,res)=>{
         Suspect.find().then(function(data){

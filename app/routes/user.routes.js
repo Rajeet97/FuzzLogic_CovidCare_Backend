@@ -52,19 +52,11 @@ module.exports = function(app) {
 app.get('/api/user/:id', authJwt.verifyToken, (req,res)=>{
 
   User.findOne({_id:req.params.id}).then(function(user){
-          // console.log(user);
           res.send(user)
-          // res.json({code:100,singleuser:user});
   }).catch(function(e){
           res.send(e)
   });
 });
-
-
-
-/*
-* Update user details by id
-*/
 
 app.put('/api/user/:id',authJwt.verifyToken,(req,res)=>{
   console.log(req.body)
